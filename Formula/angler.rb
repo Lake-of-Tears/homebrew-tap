@@ -15,6 +15,7 @@ class Angler < Formula
 
       define_method(:install) do
         bin.install "angler"
+        generate_completions_from_executable(bin/"angler", "completion")
       end
     end
     if Hardware::CPU.arm?
@@ -23,6 +24,7 @@ class Angler < Formula
 
       define_method(:install) do
         bin.install "angler"
+        generate_completions_from_executable(bin/"angler", "completion")
       end
     end
   end
@@ -33,6 +35,7 @@ class Angler < Formula
       sha256 "2d70dcf767cfb6094580c9be2da8556f3b1867f8392f8aace81d03b1379373f6"
       define_method(:install) do
         bin.install "angler"
+        generate_completions_from_executable(bin/"angler", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -40,6 +43,7 @@ class Angler < Formula
       sha256 "fe5b452ca5392cd23c5fb9828bebe566f9f5131821260f7567ce90254587ec56"
       define_method(:install) do
         bin.install "angler"
+        generate_completions_from_executable(bin/"angler", "completion")
       end
     end
   end
