@@ -14,13 +14,10 @@ The official Homebrew tap for Lake of Tears developer tools and CLIs.
 
 ## Installation
 
-### 1. Tap and Trust (macOS & Linux)
-
-For Homebrew 7.0+:
+### 1. Tap and Install (macOS & Linux)
 
 ```bash
 brew tap Lake-of-Tears/tap
-brew trust lake-of-tears/tap
 brew install angler
 ```
 
@@ -29,6 +26,8 @@ brew install angler
 ```bash
 brew install Lake-of-Tears/tap/angler
 ```
+
+Shell completions for **Bash**, **Zsh**, and **Fish** are automatically generated and linked during installation.
 
 ---
 
