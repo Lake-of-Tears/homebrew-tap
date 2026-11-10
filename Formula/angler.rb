@@ -5,13 +5,13 @@
 class Angler < Formula
   desc "The official CLI for Lake of Tears — cast queries, launch clusters, inspect catalogs, and reel in data"
   homepage "https://thelakeoftears.com"
-  version "0.2.4-build.55-47f7d10"
+  version "0.2.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.4-build.55-47f7d10/angler_0.2.4-build.55-47f7d10_darwin_amd64.tar.gz"
-      sha256 "73d6de3c5b941fa09acac81df457b3ed05afc920805920057904d4e395e371c3"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.5/angler_0.2.5_darwin_amd64.tar.gz"
+      sha256 "77aab47d802baacc2de397f22db5f874a826cf5d2185244e73d0e8031dfb2e8b"
 
       define_method(:install) do
         bin.install "angler"
@@ -19,8 +19,8 @@ class Angler < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.4-build.55-47f7d10/angler_0.2.4-build.55-47f7d10_darwin_arm64.tar.gz"
-      sha256 "9e34f275616686b8bbfc75503c0239d34c2e0fe49195184071c1ae0ca2732b1a"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.5/angler_0.2.5_darwin_arm64.tar.gz"
+      sha256 "565aa6aeda6abb071a6cd89950881b58a896856ffaff10941e82c1629c477798"
 
       define_method(:install) do
         bin.install "angler"
@@ -31,16 +31,16 @@ class Angler < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.4-build.55-47f7d10/angler_0.2.4-build.55-47f7d10_linux_amd64.tar.gz"
-      sha256 "b271bdd74217f546f16f0d448294e608e04a7c70139d9c5f5e5a95e251a3af9c"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.5/angler_0.2.5_linux_amd64.tar.gz"
+      sha256 "59aa6a9c87284448194f7d7590fe579b20010c2fd7dda5bb15bb9a50f3080249"
       define_method(:install) do
         bin.install "angler"
         generate_completions_from_executable(bin/"angler", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.4-build.55-47f7d10/angler_0.2.4-build.55-47f7d10_linux_arm64.tar.gz"
-      sha256 "70dae970694764689ecd4cd7c73453d55cbaee15ba4debf9495bea6da59b98fc"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.5/angler_0.2.5_linux_arm64.tar.gz"
+      sha256 "f7411701c5b1d139d8aa398f63a2f7fed6a6f6370fcea753dcb84fb41040eda8"
       define_method(:install) do
         bin.install "angler"
         generate_completions_from_executable(bin/"angler", "completion")
