@@ -5,13 +5,13 @@
 class Angler < Formula
   desc "The official CLI for Lake of Tears — cast queries, launch clusters, inspect catalogs, and reel in data"
   homepage "https://thelakeoftears.com"
-  version "0.2.9"
+  version "0.2.30"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.9/angler_0.2.9_darwin_amd64.tar.gz"
-      sha256 "025ea2949d1ce1499f88bdb6302c6efc6f9774530d57e2d6fec10ce6bd1024a5"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.30/angler_0.2.30_darwin_amd64.tar.gz"
+      sha256 "fc09b107b35117051cc5d995797a760eea2033c4967b2d6d4e73b7d2676b4c9b"
 
       define_method(:install) do
         bin.install "angler"
@@ -19,8 +19,8 @@ class Angler < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.9/angler_0.2.9_darwin_arm64.tar.gz"
-      sha256 "83a7771c3a3949c60771ee8277b2914270d0ab3bdec2058fc90ad209924a88b3"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.30/angler_0.2.30_darwin_arm64.tar.gz"
+      sha256 "25bc56022897ab16f9db257d96571e7a648123465fb05e5978628263cebda55a"
 
       define_method(:install) do
         bin.install "angler"
@@ -31,16 +31,16 @@ class Angler < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.9/angler_0.2.9_linux_amd64.tar.gz"
-      sha256 "fe5daf427f928d3f3b09f3e7415b0c1fdf953e280104a5bf0d1ac9939040e1c6"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.30/angler_0.2.30_linux_amd64.tar.gz"
+      sha256 "d6cb0066184a7543e42619a0ce32f0fd172655db7ba27d0c68cb78bc1b7e8a18"
       define_method(:install) do
         bin.install "angler"
         generate_completions_from_executable(bin/"angler", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.9/angler_0.2.9_linux_arm64.tar.gz"
-      sha256 "83251d39330178b1f22e1507c6dcdc3a25848f39c98c2b151c6ec9cc671287e3"
+      url "https://github.com/Lake-of-Tears/angler/releases/download/v0.2.30/angler_0.2.30_linux_arm64.tar.gz"
+      sha256 "465a0a1045a33d4d6ea597b37d01d0d52ead9f2b7f1976772f44e22a6edb42df"
       define_method(:install) do
         bin.install "angler"
         generate_completions_from_executable(bin/"angler", "completion")
